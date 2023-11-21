@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  
+  <body>
+    <div id="buttons">
+      <button id="leftB">Left</button>
+      <button id="rightB">Right</button>
+      <button id="jumpB">Jump</button>
+    </div>
+
+
+    <!--Your scene is where all your entities are present and rendered -->
+    <a-scene>
+      
+      <!--  Here is where all your imported assets will be placed
+            to be used later on in your scene  -->
+      <a-assets>
+        <img id="road" src="https://cdn.glitch.global/e9313577-3277-4b08-b3d9-7b33c1ce88de/Road.jpg?v=1642414041279">
+        <img id="road-nm" src="https://cdn.glitch.global/e9313577-3277-4b08-b3d9-7b33c1ce88de/Road%20NM.png?v=1642414060926">
+        <img id="sunny-sky" src="https://cdn.glitch.global/e9313577-3277-4b08-b3d9-7b33c1ce88de/Sunny%20Sky.jpg?v=1642414171612">
+      </a-assets>
+      
+      <a-camera>
+        
+      </a-camera>
+
+      <!-- Sky -->
+      <a-sky src="#sunny-sky"
+             side="double"
+             rotation="0 105 0">
+      </a-sky>
+
+      <!-- Ground -->
+      <a-plane id="ground" material="color: white;
+                         src: #road;
+                         repeat: 1 1;"
+               scale="400 20 1"
+               rotation="-90 90 0">
+      </a-plane>
+          
+      <a-entity id="player" position="0 0 0.5"></a-entity>
+    </a-scene>
+    <script src="script.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,10 @@
+button{ 
+    z-index: 999;
+}
+
+#buttons{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    z-index: 99999;
+}
